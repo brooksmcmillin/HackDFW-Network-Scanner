@@ -1,0 +1,20 @@
+# Get Device Info
+'''command = "sudo pylanos/pylanos.py -H 172.20.10.0/28 < secret.txt"
+data = os.popen(command).read()
+
+key = "Number of"
+stop = " systems detected"
+#print data
+while data.find(key) != -1:
+    pos = data.find(key)
+    end = data.find(stop, pos)
+    opSys = data[pos + len(key):end]
+
+    key = "detected: "
+    stop = " ("
+    pos = data.find(key)
+    end = data.find(stop, pos)
+    count = data[pos + len(key):end]
+    data = data[end:]
+
+    print "OS: ", opSys, " Count: ", count'''
